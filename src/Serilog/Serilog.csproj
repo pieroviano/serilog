@@ -67,7 +67,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageId>$(AssemblyName).Net40</PackageId>
+    <PackageId>$(AssemblyName).PieroViano</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IsPublishable>False</IsPublishable>
   </PropertyGroup>
@@ -79,8 +79,8 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <PackageReference  Include="XmpCore" Version="6.1.10.1" />
-    <PackageReference  Include="System.Threading.Tasks" Version="3.0.1" />
+    <PackageReference Include="XmpCore" Version="6.1.10.1" />
+    <PackageReference Include="System.Threading.Tasks" Version="3.0.1" />
   </ItemGroup>
 
 </Project>
