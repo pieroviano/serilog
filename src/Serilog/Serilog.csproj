@@ -67,7 +67,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageId>$(AssemblyName).PieroViano</PackageId>
+    <PackageId>Net4X.$(AssemblyName).PieroViano</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IsPublishable>False</IsPublishable>
   </PropertyGroup>
