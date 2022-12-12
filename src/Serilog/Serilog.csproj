@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Simple .NET logging with fully-structured events</Description>
     <VersionPrefix>2.12.1</VersionPrefix>
@@ -67,7 +67,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageId>$(AssemblyName)</PackageId>
+    <PackageId>Net4x.$(MSBuildProjectName)</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IsPublishable>False</IsPublishable>
     <AssemblyName>Net4x.$(MSBuildProjectName)</AssemblyName>
