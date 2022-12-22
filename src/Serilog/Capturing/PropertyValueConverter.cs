@@ -255,7 +255,10 @@ partial class PropertyValueConverter : ILogEventPropertyFactory, ILogEventProper
     bool TryConvertValueTuple(object value, Destructuring destructuring, [NotNullWhen(true)] out LogEventPropertyValue? result)
     {
         var valueType = value.GetType();
-        if (!(value is IStructuralEquatable &&
+        if (!(
+#if !NET35
+                value is IStructuralEquatable &&
+#endif
 #if !NET40 && !NET35
             valueType.IsConstructedGenericType
 #else

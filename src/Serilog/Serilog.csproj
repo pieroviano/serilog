@@ -71,7 +71,12 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IsPublishable>False</IsPublishable>
     <AssemblyName>Net4x.$(MSBuildProjectName)</AssemblyName>
+    <PackageOutputPath>$(SolutionDir)Packages\</PackageOutputPath>
   </PropertyGroup>
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Exec Command="if exist %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName) rmdir /s /q %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName)" />
+  </Target>
 
   <ItemGroup>
     <None Include="..\..\assets\icon.png" Pack="true" Visible="false" PackagePath="" />
@@ -80,7 +85,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <PackageReference Include="Net35.System.Threading.Tasks.Signed" Version="3.0.1" />
+    <PackageReference Include="AsyncBridge" Version="0.3.1" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
