@@ -74,7 +74,7 @@
     <PackageOutputPath>$(SolutionDir)Packages\</PackageOutputPath>
   </PropertyGroup>
 
-  <Target Name="CopyPackage" AfterTargets="Pack">
+  <Target Name="DeleteOldPackage" AfterTargets="Pack" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
     <Exec Command="if exist %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName) rmdir /s /q %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName)" />
   </Target>
 
