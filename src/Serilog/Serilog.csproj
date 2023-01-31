@@ -88,7 +88,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <PackageReference Include="Net4x.AsyncBridge" Version="1.0.0" PrivateAssets="all" />
+    <PackageReference Include="Net4x.AsyncBridge" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
