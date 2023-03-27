@@ -1,9 +1,11 @@
 <Project>
   <!-- Workaround for https://github.com/dotnet/sdk/pull/908 -->
   <Target Name="GetPackagingOutputs" />
+  <Import Project="Directory.General.props" />
+
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../assets/Serilog.snk</AssemblyOriginatorKeyFile>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>

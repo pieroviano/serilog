@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28917.182
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{E9D1B5E1-DEB9-4A04-8BAB-24EC7240ADAF}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,8 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{E9D1B5
 		global.json = global.json
 		NuGet.config = NuGet.config
 		README.md = README.md
-		run_perf_tests.sh = run_perf_tests.sh
 		RunPerfTests.ps1 = RunPerfTests.ps1
+		run_perf_tests.sh = run_perf_tests.sh
 		assets\Serilog.snk = assets\Serilog.snk
 	EndProjectSection
 EndProject
@@ -29,6 +29,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Tests", "test\Serilog.Tests\Serilog.Tests.csproj", "{B11B911D-977A-42CE-900A-596CF59F6FFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.PerformanceTests", "test\Serilog.PerformanceTests\Serilog.PerformanceTests.csproj", "{B4AC7ED9-517B-47E9-BB49-15F8A8478E62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D513B572-BD44-4D2C-81D7-AA21E054EC03}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
