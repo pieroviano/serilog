@@ -1,3 +1,4 @@
+mklink /j Packages ..\WhenTheVersion\Packages
 del ..\WhenTheVersion\Packages\Net4X.Serilog.*
 rmdir /s /q %userprofile%\.nuget\Packages\Net4X.Serilog
 MSBuild.exe Serilog.sln -t:clean
