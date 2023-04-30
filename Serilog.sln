@@ -32,8 +32,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.PerformanceTests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D513B572-BD44-4D2C-81D7-AA21E054EC03}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Build.bat = Build.bat
 		Directory.Build.props = Directory.Build.props
+		Properties\Version.txt = Properties\Version.txt
 	EndProjectSection
 EndProject
 Global

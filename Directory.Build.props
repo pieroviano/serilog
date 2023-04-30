@@ -1,7 +1,6 @@
 <Project>
   <!-- Workaround for https://github.com/dotnet/sdk/pull/908 -->
   <Target Name="GetPackagingOutputs" />
-  <Import Project="Directory.General.props" />
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
