@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <DontUnlock>true</DontUnlock>
+    <DontVersion>true</DontVersion>
+    <DontFileUpdate>true</DontFileUpdate>
   </PropertyGroup>
   <PropertyGroup>
     <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
