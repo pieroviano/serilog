@@ -1,4 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <DontUnlock>true</DontUnlock>
+  </PropertyGroup>
   <PropertyGroup>
     <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
     <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.9</NuGetUtilityVersion>
