@@ -1,10 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <DontUnlock>true</DontUnlock>
     <DontVersion>true</DontVersion>
     <DontFileUpdate>true</DontFileUpdate>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
     <NuGetUtilityVersion Condition="'$(NuGetUtilityVersion)' == ''">2.0.9</NuGetUtilityVersion>
   </PropertyGroup>
@@ -22,7 +21,7 @@
   <PropertyGroup>
     <Description>Simple .NET logging with fully-structured events</Description>
     <SerilogVersion Condition="'$(SerilogVersion)' == ''">2.12.1</SerilogVersion>
-    <Version>$(SerilogVersion)$(Suffix)</Version>
+    <Version>$(VersionPrefix).$(VersionSuffix)</Version>
     <Authors>Serilog Contributors</Authors>
     <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;netstandard1.0;net35;net40;net45;net46;net47;net5.0;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -37,56 +36,44 @@
     <TreatSpecificWarningsAsErrors />
     <PackageOutputPath>$(SolutionDir)Packages\</PackageOutputPath>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DefineConstants>$(DefineConstants);FEATURE_REMOTING;FEATURE_HASHTABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DefineConstants>$(DefineConstants);FEATURE_REMOTING;FEATURE_HASHTABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DefineConstants>$(DefineConstants);FEATURE_REMOTING;FEATURE_HASHTABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE;FEATURE_VALUETUPLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE;FEATURE_VALUETUPLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE;FEATURE_DEFAULT_INTERFACE;FEATURE_SPAN;FEATURE_VALUETUPLE;FEATURE_ASYNCDISPOSABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE;FEATURE_DEFAULT_INTERFACE;FEATURE_SPAN;FEATURE_VALUETUPLE;FEATURE_ASYNCDISPOSABLE</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ASYNCLOCAL;FEATURE_HASHTABLE;FEATURE_DEFAULT_INTERFACE;FEATURE_SPAN;FEATURE_DATE_AND_TIME_ONLY;FEATURE_VALUETUPLE;FEATURE_ITUPLE;FEATURE_ASYNCDISPOSABLE</DefineConstants>
   </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
   </ItemGroup>
-
   <PropertyGroup>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -98,107 +85,81 @@
     <AssemblyName>Net4x.$(MSBuildProjectName)</AssemblyName>
     <PackageOutputPath>$(SolutionDir)Packages\</PackageOutputPath>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net35|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net35|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net40|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net40|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net46|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net47|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
     <NoWarn>1701;1702;NU5104</NoWarn>
   </PropertyGroup>
-
   <Target Name="DeleteOldPackage" AfterTargets="Pack" Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
     <Exec Command="if exist %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName) rmdir /s /q %userprofile%\.nuget\Packages\Net4x.$(MSBuildProjectName)" />
   </Target>
-
   <ItemGroup>
     <None Include="..\..\assets\icon.png" Pack="true" Visible="false" PackagePath="" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="All" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)"  Condition=" '$(TargetFramework)' == 'net35' " />
+    <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" Condition=" '$(TargetFramework)' == 'net35' " />
   </ItemGroup>
-
 </Project>

@@ -2,6 +2,13 @@
   <!-- Workaround for https://github.com/dotnet/sdk/pull/908 -->
   <Target Name="GetPackagingOutputs" />
 
+  <Import Project="Directory.NuGet.props" Condition="'$(DirectoryNuGet)'==''" />
+  <PropertyGroup>
+    <VersionPrefix>$(SerilogVersion)</VersionPrefix>
+    <VersionSuffix Condition="'$(Configuration)'!='Release'">0-at20230515021623</VersionSuffix>
+    <VersionSuffix Condition="'$(Configuration)'=='Release'">0</VersionSuffix>
+  </PropertyGroup>
+
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
