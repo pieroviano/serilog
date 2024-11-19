@@ -5,6 +5,7 @@
   <Import Project="Directory.NuGet.props" Condition="'$(DirectoryNuGet)'==''" />
   <PropertyGroup>
     <VersionPrefix>$(SerilogVersion)</VersionPrefix>
+    <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
     <VersionSuffix Condition="'$(Configuration)'!='Release'">0-at20230515021623</VersionSuffix>
     <VersionSuffix Condition="'$(Configuration)'=='Release'">0</VersionSuffix>
   </PropertyGroup>
