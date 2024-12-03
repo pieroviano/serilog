@@ -79,7 +79,7 @@
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageId>Net4x.$(MSBuildProjectName)</PackageId>
+        <PackageId>Net4x.$(MSBuildProjectName).Library</PackageId>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <IsPublishable>False</IsPublishable>
         <AssemblyName>Net4x.$(MSBuildProjectName)</AssemblyName>
